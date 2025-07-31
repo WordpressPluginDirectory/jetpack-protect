@@ -204,7 +204,6 @@ class Defaults {
 		'jetpack_subscriptions_from_name',
 		'jetpack_verbum_subscription_modal',
 		'jetpack_blocks_disabled',
-		'jetpack_package_versions',
 		'jetpack_newsletters_publishing_default_frequency',
 		'jetpack_scheduled_plugins_update',
 		'jetpack_waf_automatic_rules',
@@ -352,11 +351,12 @@ class Defaults {
 		'taxonomies'                        => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_taxonomies' ),
 		'theme_support'                     => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_theme_support' ),
 		'timezone'                          => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_timezone' ),
-		'wp_get_environment_type'           => 'wp_get_environment_type',
+		'wp_get_environment_type'           => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_environment_type' ),
 		'wp_max_upload_size'                => 'wp_max_upload_size',
 		'wp_version'                        => array( 'Automattic\\Jetpack\\Sync\\Functions', 'wp_version' ),
 		'active_modules'                    => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_active_modules' ),
 		'jetpack_connection_active_plugins' => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_jetpack_connection_active_plugins' ),
+		'jetpack_package_versions'          => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_jetpack_package_versions' ),
 		'jetpack_sync_active_modules'       => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_jetpack_sync_active_modules' ),
 	);
 
@@ -467,6 +467,7 @@ class Defaults {
 		'secupress_log_err404', // SecuPress Plugin - Log 404 pages
 		'iw_omnibus_price_log', // Omnibus Plugin - Log price changes.
 		'od_url_metrics', // Optimization Detective - Log URL metrics.
+		'ap_outbox', // ActivityPub Outbox; only used for broadcasting ActivityPub activity to followers.
 	);
 
 	/**
